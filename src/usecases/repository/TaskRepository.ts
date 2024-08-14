@@ -1,9 +1,9 @@
-import Note from "./Task";
+import Task from "../../domain/Task";
 
 export default interface TaskRepository {
-    save(note: Note): Promise<void>;
-    getById(noteId: string): Promise<Note | undefined>;
-    getAll(): Promise<Note[]>;
-    update(note: Note): Promise<void>;
-    delete(noteId: string): Promise<void>;
+  save(task: Task): Promise<void>;
+  getById(taskId: string): Promise<Task | undefined>;
+  getAll(): Promise<Task[]>;
+  update(task: Task): Promise<void>;
+  delete(taskId: string): Promise<void>;
 }
