@@ -1,0 +1,2 @@
+CREATE SCHEMA teste_tecnico;
+CREATE TABLE teste_tecnico.tasks(task_id UUID PRIMARY KEY NOT NULL, title TEXT NOT NULL, content TEXT NOT NULL, color VARCHAR(8) NOT NULL, is_favorite BOOLEAN NOT NULL, created_at TIMESTAMPTZ);

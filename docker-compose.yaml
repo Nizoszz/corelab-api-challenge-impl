@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  node:
+    build: .
+    command: "npm run dev"
+    working_dir: /home/node/app
+    expose:
+      - 3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+  database:
+    image: postgres
+    container_name: psql-corelab
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASS}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - 5432:5432
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - pg-data:/var/lib/postgresql/data
+
+volumes:
+  pg-data:

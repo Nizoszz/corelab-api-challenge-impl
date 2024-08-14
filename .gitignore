@@ -1,0 +1,8 @@
+node_modules
+*lock*
+.env
+.vscode
+*.log
+dist
+.git
+coverage

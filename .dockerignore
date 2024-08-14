@@ -1,0 +1,10 @@
+node_modules/
+*lock*
+.env
+.vscode
+*.log
+dist
+.git
+Dockerfile
+docker-compose.yaml
+coverage
