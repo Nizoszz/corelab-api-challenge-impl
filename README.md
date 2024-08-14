@@ -11,8 +11,6 @@ Este projeto é sobre um gerenciador de tarefas desenvolvido para auxilar quem u
 - [API Endpoints](#api-endpoints)
 - [Instalação](#installation)
 - [Como Usar](#howtouse)
-- [Database](#database)
-- [Contato](#contact)
 
 ## Visão Geral
 
