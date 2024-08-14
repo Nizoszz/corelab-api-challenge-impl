@@ -15,7 +15,6 @@ export default class InsertTask {
 type Input = {
   title: string;
   content: string;
-  color: string;
 };
 type Output = {
   taskId: string;
